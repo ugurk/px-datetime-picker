@@ -59,6 +59,15 @@
               show-time-zone="{{props.showTimeZone.value}}"
               time-zone="{{props.timeZone.value}}">
           </px-datetime-picker>
+
+          <p>
+            Date variable: <span>[[props.dateTime.value]]</span>
+          </p>
+          <p>
+            Try selecting with picker. It will update/notify variable.
+            <br/>
+            Try changing date by keyboard (up/down etc.). It won't update/notify.
+          </p>
         </div>
       </px-demo-component>
       <!-- END Component ------------------------------------------------------>
@@ -131,7 +140,7 @@
               blockPastDates: false,
               hideTime: true,
               showTimeZone: "abbreviatedText",
-              timeZone: "America/Los_Angeles" 
+              timeZone: "America/Los_Angeles"
             },
 
             { configName: "Show buttons",
@@ -166,7 +175,7 @@
      * A reference for `this.props`. Read the documentation there.
      */
     demoProps: {
-      
+
       hideTime: {
         type: Boolean,
         defaultValue: false,
@@ -228,7 +237,7 @@
         inputDisabled: true
       }
 
-      
+
     },
 
     ready: function () {
